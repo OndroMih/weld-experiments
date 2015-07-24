@@ -1,14 +1,17 @@
 package eu.ondrejm.weld.experiments.asynchronous;
 
-import eu.ondrejm.weld.experiments.containerStartup.StartUp;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
-import javax.enterprise.event.Observes;
+import java.util.logging.Logger;
+import javax.inject.Inject;
 
 public class AsynchronousBean {
+    
+    @Inject
+    private Logger logger;
+    
     @Asynchronous
-    public Future<String> executeAsynchronously() {
-        // TODO
+    public CompletableFuture<String> executeAsynchronously() {
+        logger.info(() -> "Running asynchronously in thread " + Thread.currentThread().getName());
         return CompletableFuture.completedFuture("Done!");
     }
     
