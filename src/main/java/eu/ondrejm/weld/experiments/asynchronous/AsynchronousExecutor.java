@@ -1,4 +1,4 @@
-package eu.mihalyi.beans;
+package eu.ondrejm.weld.experiments.asynchronous;
 
 import javax.inject.Qualifier;
 import java.lang.annotation.Retention;

@@ -1,6 +1,5 @@
 package eu.ondrejm.weld.experiments.asynchronous;
 
-import eu.mihalyi.beans.AsynchronousExecutor;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Future;
